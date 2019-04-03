@@ -1,0 +1,7 @@
+---
+hosts: all
+become: yes
+become_method: sudo
+tasks:
+- name: Create directory
+  file: path=/home/Dev/sabil state=directory mode=775 owner=Dev group=Dev
