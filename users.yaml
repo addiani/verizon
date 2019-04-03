@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Create User
+    users:
+    - bob 
+    - john 
+    - sam 
+
+      
