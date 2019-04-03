@@ -1,0 +1,7 @@
+---
+- hosts: all 
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Create a file
+    file: path=/home/dev/sabil.txt state=touch
