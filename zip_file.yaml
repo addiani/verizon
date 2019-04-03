@@ -1,0 +1,9 @@
+---
+- hosts: ubuntu
+  tasks:
+- name: Create folder
+    folder: /backup
+- name: Create a zip archive of /backup
+  archive:
+    path: /backup
+    format: zip
