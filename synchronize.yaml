@@ -17,4 +17,4 @@
         dest: /tmp/hello.txt
         mode: pull
       delegate_to: "{{ item }}"
-      with_inventory_hostnames: centos
+      with_inventory_hostnames: ubuntu
