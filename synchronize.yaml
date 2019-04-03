@@ -1,6 +1,6 @@
 ---
 # Push mode (connect to xenial1 and rsync-push to other hosts)
-- hosts: centos
+- hosts: 18.184.182.9
   gather_facts: no
   tasks:
     - synchronize:
@@ -17,4 +17,4 @@
         dest: /tmp/hello.txt
         mode: pull
       delegate_to: "{{ item }}"
-      with_inventory_hostnames: ubuntu
+      with_inventory_hostnames: 3.122.254.171
