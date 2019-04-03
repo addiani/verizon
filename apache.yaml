@@ -4,7 +4,7 @@
   tasks:
     - name: Install Apache Web Server
       yum:
-        name:httpd
+        name: httpd
         state: latest
     - name: Start Apache Web Server
       sudo: yes
