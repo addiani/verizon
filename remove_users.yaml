@@ -8,3 +8,6 @@
     - bob 
     - john 
     - sam 
+    state: absent
+    remove: yes      # will remove the home directory
+    force: yes       # will remove the files in the directory
