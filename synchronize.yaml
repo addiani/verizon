@@ -1,0 +1,20 @@
+---
+# Push mode (connect to xenial1 and rsync-push to other hosts)
+- hosts: centos
+  gather_facts: no
+  tasks:
+    - synchronize:
+        src: /tmp/hello.txt
+        dest: /tmp/hello.txt
+      delegate_to: centos
+
+# Pull mode (connect to other hosts and rsync-pull from xenial1)
+- hosts: centos
+  gather_facts: no
+  tasks:
+    - synchronize:
+        src: /tmp/hello.txt
+        dest: /tmp/hello.txt
+        mode: pull
+      delegate_to: "{{ item }}"
+      with_inventory_hostnames: centos
